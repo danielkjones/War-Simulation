@@ -8,6 +8,9 @@ class War:
         self.player_2 = Player(name="Player 2")
         self.winner = None
         self.__initialize_game()
+        # for tracking purposes
+        self.war_hands = 0
+        self.turns_of_play = 0
 
     def __initialize_game(self):
         random_deck = self.__generate_random_deck()
@@ -33,6 +36,7 @@ class War:
             self.winner = self.player_1
 
     def take_turn(self):
+        self.turns_of_play += 1
         self.flip_card(winnings=[])
 
     def flip_card(self, winnings):
@@ -68,6 +72,7 @@ class War:
             self.winnder = self.player_1
             return 
 
+        self.war_hands += 1
         # each player needs to sacrafice two cards to the pot
         for _ in range(2):
             winnings.append(self.player_1.draw_card())

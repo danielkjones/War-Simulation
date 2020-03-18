@@ -14,6 +14,7 @@ def game_driver():
         w.take_turn()
         game_in_session = w.winner == None
     print("TOTAL TURNS FOR THIS GAME: {}, WINNER IS {}".format(turns, w.winner.name))
+    print("(game counted total turns: {}, game counted war turns {})".format(w.turns_of_play, w.war_hands))
 
 if __name__ == "__main__":
     game_driver()
