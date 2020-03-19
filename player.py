@@ -19,3 +19,6 @@ class Player:
 
     def draw_card(self):
         return self.deck.pop()
+
+    def reset_player(self):
+        self.deck.clear()

@@ -35,6 +35,14 @@ class War:
         if not self.player_2.can_draw:
             self.winner = self.player_1
 
+    def reset_game(self):
+        self.player_1.reset_player()
+        self.player_2.reset_player()
+        self.war_hands = 0
+        self.turns_of_play = 0
+        self.winner = None
+        self.__initialize_game()
+
     def take_turn(self):
         self.turns_of_play += 1
         self.flip_card(winnings=[])
