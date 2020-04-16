@@ -1,7 +1,7 @@
 from war import War
 import sys
 
-LOG_FILE = "game_log.csv"
+LOG_FILE = "../data/game_log.csv"
 
 def game_driver(iterations=1):
     completed_iterations = 0
